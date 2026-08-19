@@ -1,0 +1,16 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Logs
+*.log
+
+# Secrets — never commit these
+.env
+.env.*
+*.key
+*.pem
+id_rsa
+id_rsa.pub

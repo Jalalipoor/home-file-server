@@ -1,0 +1,10 @@
+# Network configuration (written by subiquity, then edited).
+# enp3s0 uses DHCP with a router-side static lease (192.168.100.222).
+# Wake-on-LAN is enabled so the server can be powered on remotely.
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp3s0:
+      dhcp4: true
+      wakeonlan: true

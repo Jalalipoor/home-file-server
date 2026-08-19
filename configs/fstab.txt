@@ -1,0 +1,20 @@
+# /etc/fstab: static file system information.
+#
+# NOTE: All device UUIDs below have been replaced with placeholders.
+# Run `blkid` on the server to find your own UUIDs.
+#
+# <file system>                              <mount point>  <type>  <options>                               <dump>  <pass>
+
+# Root filesystem (LVM)
+/dev/disk/by-id/dm-uuid-LVM-<root-lvm-uuid>  /              ext4    defaults                                0       1
+
+# /boot
+/dev/disk/by-uuid/<boot-uuid>                /boot          ext4    defaults                                0       1
+
+# /boot/efi
+/dev/disk/by-uuid/<efi-uuid>                 /boot/efi      vfat    defaults                                0       1
+
+/swap.img                                    none           swap    sw                                      0       0
+
+# Data HDD mounted at /srv/data
+UUID=<data-uuid>                              /srv/data      ext4    defaults,nofail,x-systemd.device-timeout=15  0  2
